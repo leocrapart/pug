@@ -6,7 +6,7 @@ const app = express()
 const router = express.Router();
 
 app.set('view engine', 'pug')
-app.use(express.static('./public'))
+app.use(express.static(path.join(__dirname + "/public")))
 app.use('/api', router);
 
 
@@ -25,16 +25,9 @@ app.get("/profile", (req, res) => {
     })
 })
 
-app.get('/api', function(req, res) {
-    res.status(200).send('Hello World API')
-});
-
-
-
-const port = 8080;
 
 // Start the app
-
+const port = 8080;
 app.listen(port, () => {
   console.log('App started on port: ' + port);
 });
