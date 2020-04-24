@@ -31,7 +31,7 @@ app.get('/api', function(req, res) {
 
 
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 443;
 
 // Start the app
 
